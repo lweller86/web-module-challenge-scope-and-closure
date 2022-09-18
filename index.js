@@ -29,12 +29,12 @@ console.log('example task:', processFirstItem(['foo','bar'],function(str){return
   
   Study the code for counter1 and counter2, then answer the questions below.
   
-  1. What is the difference between counter1 and counter2?
+  1. What is the difference between counter1 and counter2? counter 2 has the 'count' variable outside of the function scope. 
   
-  2. Which of the two uses a closure? How can you tell?
+  2. Which of the two uses a closure? How can you tell?counter code 1, Variable is is stated inside the function and returned from the function. 
   
   3. In what scenario would the counter1 code be preferable? In what scenario would 
-     counter2 be better?  
+     counter2 be better?  counter 1 would return the count and close count as a variable. Counter two would allow count to be accessed and changed from outside the function if there were a second function accessing it. 
 */
 
 // counter1 code
@@ -64,10 +64,11 @@ Use the inning function below to do the following:
 NOTE: This will be a callback function for the tasks below
 */
 
-function inning(/*Code Here*/){
-    /*Code Here*/
+function inning(score){
+  return score = Math.round(Math.random(0, 3)) 
+  
 }
-
+console.log(inning)
 
 /* ⚾️⚾️⚾️ Task 3: finalScore() ⚾️⚾️⚾️
 Use the finalScore function below to do the following:
