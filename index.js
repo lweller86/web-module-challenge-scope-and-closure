@@ -1,5 +1,7 @@
 //❗❗ PLEASE READ THE README file for project instructions, helpful resources, additional tasks and stretch problems, and more ❗❗ 
 
+const { Console } = require("console");
+
 // ⭐️ Example Challenge START ⭐️
 
 /**Example Task : processFirstItem()
@@ -65,10 +67,9 @@ NOTE: This will be a callback function for the tasks below
 */
 
 function inning(score){
-  return score = Math.round(Math.random(0, 3)) 
-  
+  return score = Math.round(Math.random() * Math.floor(3)); 
 }
-console.log(inning)
+
 
 /* ⚾️⚾️⚾️ Task 3: finalScore() ⚾️⚾️⚾️
 Use the finalScore function below to do the following:
@@ -84,9 +85,21 @@ Use the finalScore function below to do the following:
 }
 */ 
 
-function finalScore(/*Code Here*/){
-  /*Code Here*/
+function finalScore(inning, number ){
+  let homeScore = 0;
+  let awayScore = 0;
+  for(let i = 0;i < number; i++){
+    homeScore = homeScore + inning();
+    awayScore = awayScore + inning();
+  }
+return {
+  Home: homeScore,
+  Away: awayScore
 }
+}
+
+
+
 
 
 /* ⚾️⚾️⚾️ Task 4: getInningScore() ⚾️⚾️⚾️
@@ -102,11 +115,13 @@ For example: invoking getInningScore(inning) might return this object:
   */
 
 
-function getInningScore(/*Your Code Here */) {
-  /*Your Code Here */
-
+function getInningScore(inningNumb) {
+  return{
+    Home: inningNumb(),
+    Away: inningNumb()
+  }
 }
-
+console.log(getInningScore(inning));
 
 /* STRETCH: ⚾️⚾️⚾️ Task 5: scoreboard() ⚾️⚾️⚾️
 Use the scoreboard function below to do the following:
@@ -148,11 +163,9 @@ Use the scoreboard function below to do the following:
   "This game will require extra innings: Away 10 - Home 10"
 ] */
 // NOTE: There is no test associated with this code; if your output matches the given example, consider it complete!
-function scoreboard(/* CODE HERE */) {
-  /* CODE HERE */
-}
-
-
+function scoreboard(/*your code here*/){
+  /*your code Here*/}
+ 
 
 
 /* 🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑 */
